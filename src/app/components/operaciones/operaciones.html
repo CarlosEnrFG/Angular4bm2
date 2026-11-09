@@ -7,22 +7,22 @@
       <form>
         <div class="mb-3">
           <label for="numeroUno" class="form-label">N&uacute;mero uno</label>
-          <input type="number" class="form-control" id="numeroUno">
+          <input type="number" class="form-control" id="numeroUno" name="numeroUno" step="1" min="1" max="100" [(ngModel)] = "numeroUno"/>
         </div>
         <div class="mb-3">
           <label for="numeroDos" class="form-label">N&uacute;mero dos</label>
-          <input type="number" class="form-control" id="numeroDos">
+          <input type="number" class="form-control" id="numeroDos" name="numeroDos" step="1" min="1" max="100" [(ngModel)] = "numeroDos"/>
         </div>
         <div class="mb-3">
-          <button type="button" class="btn btn-outline-primary">Suma</button>
-          <button type="button" class="btn btn-outline-danger">Resta</button>
-          <button type="button" class="btn btn-outline-success">Multiplicaci&oacute;n</button>
-          <button type="button" class="btn btn-outline-info">Divisi&oacute;n</button>
+          <button type="button" class="btn btn-outline-primary" (click)="sumar()">Suma</button>
+          <button type="button" class="btn btn-outline-danger" (click)="restar()">Resta</button>
+          <button type="button" class="btn btn-outline-success" (click)="multiplicar()">Multiplicaci&oacute;n</button>
+          <button type="button" class="btn btn-outline-info" (click)="dividir()">Divisi&oacute;n</button>
         </div>
       </form>
     </div>
     <div class="card-footer text-info text-center">
-        <i>El resultado es {{resultado}}</i>
+        <i>El resultado es {{ resultado }}</i>
     </div>
   </div>
 </div>

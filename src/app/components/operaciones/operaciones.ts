@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  imports: [],
+  imports: [FormsModule],
   selector: 'app-operaciones',
   styleUrl: './operaciones.css',
   templateUrl: './operaciones.html',
 })
 export class Operaciones {
   titulo: string = 'Operaciones Básicas';
-  numeroUno: number = 0;
-  numeroDos: number = 0;
+  numeroUno: number = 5;
+  numeroDos: number = 10;
   resultado: number = 0;
 
   sumar(): void{
